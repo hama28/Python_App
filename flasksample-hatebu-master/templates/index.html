@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      {% for hatebu in hatebu_array %}
+        <div class="card mt-5">
+          <div class="card-header">
+            <h5 class="card-title">人気記事</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">{{ hatebu[0] }}</br>
+              Users:{{ hatebu[2] }}<br>
+              掲載サイト:{{ hatebu[3] }}</p>
+            <a href="{{ hatebu[1]}}" class="btn btn-primary">記事へ</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
